@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const massive = require('massive')
-const {SERVER_PORT, CONNECTIONT_STRING} = process.env
+const {SERVER_PORT, CONNECTION_STRING} = process.env
 const app = express()
 
 const postCtrl = require('./controllers/postController')
@@ -10,7 +10,7 @@ const postUrl = '/api/posts'
 
 app.use(express.json())
 
-massive(CONNECTIONT_STRING).then(db => {
+massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
     console.log('database is connected')
     app.listen(SERVER_PORT, () => console.log(`Server is running on port ${SERVER_PORT}`))
