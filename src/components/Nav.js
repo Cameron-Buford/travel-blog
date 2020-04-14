@@ -9,10 +9,13 @@ import {getUser} from '../Duxx/reducer'
 const Nav = ({history}) => {
     return(
         <div>
+            <button onClick = {() => history.push('/')}>HOME</button>
             <button onClick={() => history.push('/Posts')}> Blog Posts </button>
             Nav 
             <button onClick = {() => history.push('/Gallery')}>Gallery</button>
             <button onClick = {() => history.push('/Destinations')}>Destinations in Planning</button>
+            <button>Login</button>
+            <button>Register</button>
         </div>
     )
 }
