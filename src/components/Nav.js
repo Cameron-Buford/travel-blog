@@ -14,8 +14,8 @@ const Nav = ({history}) => {
             Nav 
             <button onClick = {() => history.push('/Gallery')}>Gallery</button>
             <button onClick = {() => history.push('/Destinations')}>Destinations in Planning</button>
-            <button>Login</button>
-            <button>Register</button>
+            <button onClick = {() => history.push('/Auth')}>Login</button>
+            <button onClick = {() => history.push('/Auth')}>Register</button>
         </div>
     )
 }

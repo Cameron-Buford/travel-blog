@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard'
 import Destinations from './components/Destinations'
 import Posts from './components/Posts'
 import Gallery from './components/Gallery'
+import Auth from './components/Auth'
 
 
 
@@ -13,6 +14,7 @@ export default (
         <Route path='/Destinations' component={Destinations}/>
         <Route path='/Posts' component={Posts}/>
         <Route path='/Gallery' component={Gallery}/>
+        <Route path='/Auth' component={Auth}/>
         
     </Switch>
 );
