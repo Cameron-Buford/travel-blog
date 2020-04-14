@@ -6,15 +6,15 @@ import {withRouter} from 'react-router-dom'
 import {getUser} from '../Duxx/reducer'
 
 
-const Nav = () => {
+const Nav = ({history}) => {
     return(
         <div>
-            <button>Blog Posts</button>
+            <button onClick={() => history.push('/Posts')}> Blog Posts </button>
             Nav 
-            <button>Gallery</button>
-            <button>Destinations in Planning</button>
+            <button onClick = {() => history.push('/Gallery')}>Gallery</button>
+            <button onClick = {() => history.push('/Destinations')}>Destinations in Planning</button>
         </div>
     )
 }
 
-export default Nav
+export default (withRouter(Nav))
